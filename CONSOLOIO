@@ -1,0 +1,35 @@
+import javax.swing.*;
+
+public class ConsoleIO {
+    public static void main(String[] args) {
+        //lectura de datos
+        String numeroStr = JOptionPane. showInputDialog(null, "Ingrese un numero decimal del sistema decimal ");
+        int numeroDecimal=0;
+        try{
+            numeroDecimal = Integer.parseInt(numeroStr);
+
+            } catch (Exception e ) {
+            JOptionPane.showInputDialog(null, "error capa 8");
+            main(args);
+            System .exit(0);
+            }
+        //transforar numero decimal asi mismo
+        String mensajeDec = "numero decimal de "+ numeroDecimal+ "="+Integer.toString(numeroDecimal);
+        System.out.println(mensajeDec);
+        System.out.println("numero decimal de "+ numeroDecimal+ "="+Integer.toString(numeroDecimal));
+        // decimal en binario
+        String mensajeBin ="numero binario de " + numeroDecimal + "="+ Integer.toBinaryString(numeroDecimal);
+        System.out.println(mensajeBin);
+        System.out.println("numero binario de " + numeroDecimal + "="+ Integer.toBinaryString(numeroDecimal));
+        //transforar numero decimal a octal
+        System.out.println("numero decimal de "+ numeroDecimal+ "="+Integer. toOctalString(numeroDecimal));
+        // decimal en hexadecimal
+        System.out.println("numero octal de " + numeroDecimal + "="+ Integer.toHexString(numeroDecimal));
+        //desplegar valores capturados
+       String mensaje = mensajeDec + "\n";
+       mensaje += mensajeBin + "\n";
+        mensaje += "numero octal de "+ numeroDecimal+ "="+Integer. toOctalString(numeroDecimal)+ "\n";
+        mensaje += "numero hexadecimal de " + numeroDecimal + "="+ Integer.toHexString(numeroDecimal)+ "\n";
+        JOptionPane.showInputDialog(null, mensaje);
+    }
+}
