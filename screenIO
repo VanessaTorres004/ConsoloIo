@@ -1,0 +1,36 @@
+public class ScreenIO {
+    public static void main(String[] args) {
+        //lectura de datos
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese un numero decimal del sistema decimal ");
+        int numeroDecimal=0;
+        try{
+            numeroDecimal = scanner.nextInt();
+
+            } catch (Exception e ) {
+            System.out.println("error capa 8");
+            main(args);
+            System .exit(0);
+            }
+        //transforar numero decimal asi mismo
+        String mensajeDec = "numero decimal de "+ numeroDecimal+ "="+Integer.toString(numeroDecimal);
+        System.out.println(mensajeDec);
+
+        // decimal en binario
+        String mensajeBin ="numero binario de " + numeroDecimal + "="+ Integer.toBinaryString(numeroDecimal);
+        System.out.println(mensajeBin);
+
+        //transforar numero decimal a octal
+        String mensajeoct ="numero decimal de "+ numeroDecimal+ "="+Integer. toOctalString(numeroDecimal);
+        System.out.println(mensajeoct);
+        // decimal en hexadecimal
+        String mensajeHex = "numero octal de " + numeroDecimal + "="+ Integer.toHexString(numeroDecimal);
+        System.out.println(mensajeHex);
+        //desplegar valores capturados
+       String mensaje = mensajeDec + "\n";
+       mensaje += mensajeBin + "\n";
+        mensaje += mensajeoct+ "\n";
+        mensaje += mensajeHex+ "\n";
+        System.out.println(mensaje);
+    }
+}
